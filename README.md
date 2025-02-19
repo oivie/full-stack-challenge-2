@@ -1,6 +1,6 @@
 # Wise Publishing Frontend Challenge 👨‍💻
 
-This challenge is meant to measure your capabilities as a **senior frontend developer** and assess your approach to solving complex frontend problems. We value clean architecture, attention to performance, and good user experience.
+This challenge is meant to measure your capabilities as a **junior frontend developer** and assess your approach to solving frontend problems. We value clean code, and good user experience.
 
 We appreciate adherence to **SOLID**, **KISS**, and **DRY** principles and encourage a focus on performance, **Core Web Vitals (CWV)**, and UI/UX skills.
 
@@ -10,9 +10,13 @@ We expect that an MVP (Minimum Viable Product) of this challenge will take rough
 
 ### Requirements ⚙️
 
-This project will use **Laravel** (as a backend framework) and **Alpine.js**, **vanilla JS**, **HTML**, **CSS**, and **Blade templating** for the frontend.
+This project will use **Laravel** (as a backend framework) and **Alpine.js**, **JS with Typescript**, **HTML**, **CSS**, and **Blade templating** for the frontend.
 
 You are tasked with creating a responsive, performant, and user-friendly job board application called WiseJobs.
+
+### Backend
+If you feel like the backend is too much feel free to simply use json files or return json from the controllers no need to implement the CRUD functionality unless you want to.
+We are more focusing on the frontend solutions.
 
 ### Users 👥
 
@@ -26,15 +30,10 @@ You are tasked with creating a responsive, performant, and user-friendly job boa
 ### Admin Users 🗣️
 
 **Admin users should be able to:**
-- Create companies.
 - View all companies and the number of postings for each company.
 - View a single company.
-- Update a company.
-- Delete a company and all of its postings.
-- Create job postings for a selected company.
 - View a single job posting.
-- Update a job posting.
-- Delete a job posting.
+Note that we would like to see the options for update and delete how you would deal with the UI but no need to connect to a backend. You can simply throw a notification notifying the user that the action was successful. 
   
 ### Frontend Expectations 🤘
 
