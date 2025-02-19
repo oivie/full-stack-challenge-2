@@ -16,7 +16,7 @@ You are tasked with creating a responsive, performant, and user-friendly job boa
 
 ### Backend
 If you feel like the backend is too much feel free to simply use json files or return json from the controllers no need to implement the CRUD functionality unless you want to.
-We are more focusing on the frontend solutions.
+We are more focused on the frontend solutions.
 
 ### Users 👥
 
