@@ -24,13 +24,11 @@
         </div>
     </nav>
 
-
     <!-- Page Heading -->
     <div class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white p-8 mb-8">
         <h1 class="text-4xl font-bold">Welcome to WiseJobs</h1>
         <p class="mt-2">Find your next opportunity.</p>
     </div>
-
 
     <!-- Alpine Data & UI Container -->
     <div x-data="jobs" x-init="fetchJobs()" class="max-w-4xl mx-auto space-y-6">
@@ -38,14 +36,21 @@
         <?php include 'filters.blade.php'; ?>
 
         <!-- Loading Indicator (only shows if list is empty) -->
-        <div x-show="list.length === 0" class="text-gray-500 italic">
+        <div x-show="list.length === 0" 
+             class="text-gray-500 italic"
+             x-transition:enter="transition-opacity ease-out duration-500"
+             x-transition:enter-start="opacity-0"
+             x-transition:enter-end="opacity-100">
             Loading jobs...
         </div>
 
         <!-- Job Listings -->
         <div x-show="list.length > 0" class="space-y-4">
             <template x-for="job in filteredJobs()" :key="job.id">
-                <div x-data='{ job: job }'>
+                <div x-data="{ job: job }"
+                     x-transition:enter="transition transform ease-out duration-300"
+                     x-transition:enter-start="opacity-0 translate-y-4"
+                     x-transition:enter-end="opacity-100 translate-y-0">
                     <?php include 'job-card.blade.php'; ?>
                 </div>
             </template>

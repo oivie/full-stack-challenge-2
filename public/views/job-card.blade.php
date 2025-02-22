@@ -17,11 +17,19 @@
             </p>
             <button type="button" 
                     class="mt-2 px-4 py-2 rounded-md text-sm"
-                    :class="showDescription ? 'bg-pink-500 text-white' : 'bg-violet-500 text-white'"
+                    :class="showDescription ? 'bg-pink-400 text-white' : 'bg-violet-500 text-white'"
                     @click="showDescription = !showDescription">
                 <span x-text="showDescription ? 'Hide Description' : 'Show Description'"></span>
             </button>
-            <div x-show="showDescription" class="mt-4 text-gray-700" x-cloak>
+            <div x-show="showDescription"
+                 x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0 transform scale-90"
+                 x-transition:enter-end="opacity-100 transform scale-100"
+                 x-transition:leave="transition ease-in duration-300"
+                 x-transition:leave-start="opacity-100 transform scale-100"
+                 x-transition:leave-end="opacity-0 transform scale-90"
+                 class="mt-4 text-gray-700" 
+                 x-cloak>
                 <p x-text="job.description"></p>
             </div>
         </div>
