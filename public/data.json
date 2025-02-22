@@ -5,7 +5,8 @@
         "company": "Ace Publishing",
         "location": "Remote",
         "salary": "$80,000",
-        "type": "Remote"
+        "type": "Remote",
+        "short_description": "Design and implement user interfaces."
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "company": "InnovateX",
         "location": "Toronto, ON",
         "salary": "$90,000",
-        "type": "In-Person"
+        "type": "In-Person",
+        "short_description": "Develop and optimize backend services."
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "company": "Tech Solutions",
         "location": "New York, NY",
         "salary": "$100,000",
-        "type": "Remote"
+        "type": "Remote",
+        "short_description": "Handle both frontend and backend tasks."
     },
     {
         "id": 4,
@@ -29,6 +32,7 @@
         "company": "Appify",
         "location": "San Francisco, CA",
         "salary": "$95,000",
-        "type": "In-Person"
+        "type": "In-Person",
+        "short_description": "Build and maintain mobile applications."
     }
 ]

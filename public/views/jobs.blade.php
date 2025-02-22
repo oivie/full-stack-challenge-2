@@ -6,8 +6,8 @@
     <title>WiseJobs</title>
     <!-- Tailwind CSS from CDN (Mobile-first styling) -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- Alpine.js from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+        <!-- Alpine.js from CDN -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 p-4">
@@ -43,7 +43,6 @@
                 class="block w-full sm:w-auto border-gray-300 rounded p-2">
                 <option value="">All</option>
                 <option value="Remote">Remote</option>
-                <option value="In-Person">In-Person</option>
             </select>
         </div>
 
@@ -55,17 +54,12 @@
         <!-- Job Listings -->
         <div x-show="list.length > 0" class="space-y-4">
             <template x-for="job in filteredJobs()" :key="job.id">
-                <article class="bg-white rounded shadow p-4">
-                    <h2 x-text="job.title" class="text-xl font-semibold mb-1"></h2>
-                    <p x-text="job.company" class="text-gray-700 mb-1"></p>
-                    <p x-text="job.location" class="text-gray-700 mb-1"></p>
-                    <p x-text="job.salary" class="text-gray-700 mb-1"></p>
-                    <span class="inline-block px-2 py-1 text-sm font-medium rounded
-                       bg-indigo-100 text-indigo-800"
-                        x-text="job.type"></span>
-                </article>
+                <div x-data='{ job: job }'>
+                    <?php include 'job-card.blade.php'; ?>
+                </div>
             </template>
         </div>
+
     </div>
 
     <!-- Inline Alpine Logic -->
