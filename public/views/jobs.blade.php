@@ -33,18 +33,7 @@
     <!-- Alpine Data & UI Container -->
     <div x-data="jobs" x-init="fetchJobs()" class="max-w-4xl mx-auto space-y-6">
 
-        <!-- Filter Label & Select -->
-        <div>
-            <label for="jobFilter" class="block text-sm font-medium text-gray-700 mb-2">
-                Filter by Type:
-            </label>
-            <select id="jobFilter"
-                x-model="filterType"
-                class="block w-full sm:w-auto border-gray-300 rounded p-2">
-                <option value="">All</option>
-                <option value="Remote">Remote</option>
-            </select>
-        </div>
+        <?php include 'filters.blade.php'; ?>
 
         <!-- Loading Indicator (only shows if list is empty) -->
         <div x-show="list.length === 0" class="text-gray-500 italic">
@@ -62,30 +51,11 @@
 
     </div>
 
-    <!-- Inline Alpine Logic -->
+    <!-- <script src="js/main.js" defer></script> -->
+
     <script>
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('jobs', () => ({
-                list: [],
-                filterType: "",
-                async fetchJobs() {
-                    try {
-                        const response = await fetch('/data.json'); // or '/jobs.json'
-                        if (!response.ok) throw new Error("Failed to load jobs");
-                        this.list = await response.json();
-                    } catch (error) {
-                        console.error("Error fetching jobs:", error);
-                    }
-                },
-                filteredJobs() {
-                    return this.filterType ?
-                        this.list.filter(job => job.type === this.filterType) :
-                        this.list;
-                }
-            }));
-        });
+        <?php include 'js/main.js'; ?>
     </script>
 
 </body>
-
 </html>
