@@ -4,7 +4,7 @@
         "title": "Frontend Developer",
         "company": "Ace Publishing",
         "location": "Remote",
-        "salary": "$80,000",
+        "salary": 80000,
         "type": "Remote",
         "description": "Design and implement user interfaces. Collaborate with designers to create intuitive layouts. Ensure cross-browser compatibility and performance.",
         "skills": ["HTML", "CSS", "JavaScript", "React", "UI/UX Design"]
@@ -14,7 +14,7 @@
         "title": "Backend Engineer",
         "company": "InnovateX",
         "location": "Toronto, ON",
-        "salary": "$90,000",
+        "salary": 90000,
         "type": "In-Person",
         "description": "Develop and optimize backend services. Work with databases and APIs to ensure reliability. Optimize systems for performance and scalability.",
         "skills": ["Node.js", "SQL", "API Development", "Server-side Logic", "Database Management"]
@@ -24,7 +24,7 @@
         "title": "Full Stack Developer",
         "company": "Tech Solutions",
         "location": "New York, NY",
-        "salary": "$100,000",
+        "salary": 100000,
         "type": "Remote",
         "description": "Handle both frontend and backend tasks. Collaborate across teams to meet project requirements. Ensure seamless integration between systems.",
         "skills": ["JavaScript", "React", "Node.js", "Database Management", "RESTful APIs"]
@@ -34,7 +34,7 @@
         "title": "Mobile App Developer",
         "company": "Appify",
         "location": "San Francisco, CA",
-        "salary": "$95,000",
+        "salary": 95000,
         "type": "In-Person",
         "description": "Build and maintain mobile applications. Focus on creating responsive and user-friendly experiences. Continuously update the code to adopt new standards.",
         "skills": ["Swift", "Kotlin", "React Native", "UI/UX Design", "Mobile Testing"]

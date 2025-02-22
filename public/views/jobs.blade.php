@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <title>WiseJobs</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
     <!-- Tailwind CSS from CDN (Mobile-first styling) -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-        <!-- Alpine.js from CDN -->
-        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine.js from CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 p-4">
