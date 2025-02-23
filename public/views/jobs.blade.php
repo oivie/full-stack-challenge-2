@@ -30,7 +30,7 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800 p-4">
-
+    <!-- Navigation  -->
     <nav class="bg-white shadow mb-8 p-4" role="navigation" aria-label="Main Navigation">
         <div class="max-w-4xl mx-auto flex items-center justify-between">
             <div class="text-xl font-bold">WiseJobs</div>
