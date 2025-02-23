@@ -1,5 +1,4 @@
 <div x-data="{ showDescription: false }" role="article" aria-label="Job listing" class="bg-white rounded-lg shadow p-4 sm:p-6 m-2">
-    <!-- Use flex-col on mobile and flex-row from md screens upward -->
     <div class="flex flex-col md:flex-row">
         <!-- Left column: Job details -->
         <div class="flex-grow">
@@ -18,28 +17,32 @@
             <button type="button" 
                     class="mt-2 px-4 py-2 rounded-md text-sm"
                     :class="showDescription ? 'bg-pink-400 text-white' : 'bg-violet-500 text-white'"
-                    @click="showDescription = !showDescription">
+                    @click="showDescription = !showDescription"
+                    :aria-expanded="showDescription"
+                    aria-controls="job-description">
                 <span x-text="showDescription ? 'Hide Description' : 'Show Description'"></span>
             </button>
-            <div x-show="showDescription"
-                 x-transition:enter="transition ease-out duration-300"
-                 x-transition:enter-start="opacity-0 transform scale-90"
-                 x-transition:enter-end="opacity-100 transform scale-100"
-                 x-transition:leave="transition ease-in duration-300"
-                 x-transition:leave-start="opacity-100 transform scale-100"
-                 x-transition:leave-end="opacity-0 transform scale-90"
-                 class="mt-4 text-gray-700" 
-                 x-cloak>
+            <div id="job-description"
+                x-show="showDescription"
+                x-transition:enter="transition-opacity duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition-opacity duration-300"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                class="mt-4 text-gray-700" 
+                x-cloak>
                 <p x-text="job.description"></p>
             </div>
+
         </div>
 
         <!-- Right column: Skills cloud -->
         <div class="mt-4 md:mt-0 md:ml-6">
-            <h3 class="text-lg font-bold mb-2">Skills</h3>
-            <div class="flex flex-wrap gap-2">
+            <h3 id="skills-heading" class="text-lg font-bold mb-2">Skills</h3>
+            <div role="list" aria-labelledby="skills-heading" class="flex flex-wrap gap-2">
                 <template x-for="skill in job.skills" :key="skill">
-                    <span x-text="skill" class="px-3 py-1 rounded-full text-sm bg-blue-200 text-blue-800"></span>
+                    <span role="listitem" x-text="skill" class="px-3 py-1 rounded-full text-sm bg-blue-200 text-blue-800"></span>
                 </template>
             </div>
         </div>
