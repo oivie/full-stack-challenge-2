@@ -38,5 +38,15 @@
         "type": "In-Person",
         "description": "Build and maintain mobile applications. Focus on creating responsive and user-friendly experiences. Continuously update the code to adopt new standards.",
         "skills": ["Swift", "Kotlin", "React Native", "UI/UX Design", "Mobile Testing"]
+    },
+    {
+        "id": 5,
+        "title": "Full Stack Developer",
+        "company": "Tech Solutions",
+        "location": "New York, NY",
+        "salary": 100000,
+        "type": "Remote",
+        "description": "Handle both frontend and backend tasks. Collaborate across teams to meet project requirements. Ensure seamless integration between systems.",
+        "skills": ["JavaScript", "React", "Node.js", "Database Management", "RESTful APIs"]
     }
 ]
