@@ -31,15 +31,8 @@
 
 <body class="bg-gray-50 text-gray-800 p-4">
     <!-- Navigation  -->
-    <nav class="bg-white shadow mb-8 p-4" role="navigation" aria-label="Main Navigation">
-        <div class="max-w-4xl mx-auto flex items-center justify-between">
-            <div class="text-xl font-bold">WiseJobs</div>
-            <div class="space-x-4">
-                <a href="#" class="text-gray-700 hover:text-gray-900" aria-label="Home">Home</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900" aria-label="Admin Area">Admin</a>
-            </div>
-        </div>
-    </nav>
+    <?php include 'nav.blade.php'; ?>
+
 
     <!-- Page Heading -->
     <div class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white p-8 mb-8" role="banner">
