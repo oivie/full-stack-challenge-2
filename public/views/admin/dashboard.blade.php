@@ -12,20 +12,39 @@
     <!-- Navigation -->
     <?php include __DIR__ . '/../nav.blade.php'; ?>
 
-  <div class="max-w-4xl mx-auto" x-show="!loading">
-    <h1 class="text-2xl font-bold mb-4">All Companies</h1>
-    <div class="space-y-2">
-      <!-- List all companies and their job counts -->
+  <!-- SECTION 1: All Companies -->
+  <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md" x-show="viewMode === 'allCompanies' && !loading">
+    <h1 class="text-3xl font-semibold text-gray-800 mb-6 border-b pb-2">All Companies</h1>
+    <div class="grid grid-cols-1 gap-4">
       <template x-for="[companyName, count] in Object.entries(companyCounts())" :key="companyName">
-        <div>
-          <a :href="'/index.php?page=admin/company&company=' + encodeURIComponent(companyName)"
-             class="text-blue-600 hover:underline">
+        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-150 ease-in-out">
+          <button @click="showCompany(companyName)"
+                  class="text-lg font-medium text-blue-500 hover:underline focus:outline-none">
             <span x-text="companyName"></span>
-          </a>
-          (<span x-text="count"></span> postings)
+          </button>
+          <span class="text-sm text-gray-600">(<span x-text="count"></span> postings)</span>
         </div>
       </template>
     </div>
+  </div>
+
+  <!-- SECTION 2: Company Partial -->
+  <div x-show="viewMode === 'companyDetails'" x-cloak>
+    <!-- "Back" button to go back to all companies -->
+    <button @click="viewMode = 'allCompanies'"
+            class="mb-4 px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded">
+      ← Back
+    </button>
+    <?php include __DIR__ . '/company.blade.php'; ?>
+  </div>
+
+  <!-- SECTION 3: Job Partial -->
+  <div x-show="viewMode === 'jobDetails'" x-cloak>
+    <button @click="viewMode = 'companyDetails'"
+            class="mb-4 px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded">
+      ← Back to Company
+    </button>
+    <?php include __DIR__ . '/job.blade.php'; ?>
   </div>
 
   <div x-show="loading" class="text-gray-500 italic">Loading...</div>

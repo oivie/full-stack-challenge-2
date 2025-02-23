@@ -5,6 +5,7 @@ document.addEventListener('alpine:init', () => {
       notification: '',
       currentCompany: '',
       currentJob: null,
+      viewMode: 'allCompanies',
   
       // 1) Fetch all jobs once
       async fetchAllJobs() {
@@ -22,11 +23,20 @@ document.addEventListener('alpine:init', () => {
   
       // 2) For the Dashboard
       companyCounts() {
-        // Build an object { 'Ace Publishing': 3, 'InnovateX': 2, ... }
+        // Build an object { companyName: count }
         return this.allJobs.reduce((acc, job) => {
           acc[job.company] = (acc[job.company] || 0) + 1;
           return acc;
         }, {});
+      },
+
+      showCompany(companyName) {
+        this.currentCompany = companyName;
+        this.viewMode = 'companyDetails';
+      },
+      showJob(job) {
+        this.currentJob = job;
+        this.viewMode = 'jobDetails';
       },
   
       // 3) For Company Page
