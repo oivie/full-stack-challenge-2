@@ -1,6 +1,6 @@
 # Wise Publishing Frontend Challenge 👨‍💻
 ## Information
-A minimal front-end challenge using Alpine.js, Tailwind CSS, and PHP for partial includes. Screenshots and demo at the end, before original task TODO.
+A front-end challenge using Alpine.js, Tailwind CSS, and PHP for partial includes. Screenshots and demo at the end, before original task TODO.
 ### This project demonstrates:
 - A public “Jobs” view where users can filter job postings by type, company, location, and minimum salary.
 - An “admin” area (dashboard) for viewing companies and job details, with fake “update/delete” actions.
