@@ -9,7 +9,7 @@
       <div class="bg-white p-4 rounded shadow" role="article" aria-label="Job posting">
         <h2 class="text-lg font-semibold" x-text="job.title"></h2>
         <p class="text-gray-600" x-text="job.location"></p>
-        <p class="text-green-600" x-text="job.salary"></p>
+        <p class="text-green-600" x-text="'Salary: $' + job.salary"></p>
         <p class="text-blue-600" x-text="job.type"></p>
         <div class="mt-2 space-x-2">
           <!-- Link to Job Details Page -->

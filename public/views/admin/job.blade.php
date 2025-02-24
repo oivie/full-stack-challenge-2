@@ -3,7 +3,7 @@
     <div class="bg-white p-4 rounded shadow" role="article" aria-labelledby="job-title">
       <h2 class="text-lg font-semibold" x-text="currentJob.title" id="job-title"></h2>
       <p class="text-gray-600" x-text="currentJob.location" aria-label="Location"></p>
-      <p class="text-green-600" x-text="currentJob.salary" aria-label="Salary"></p>
+      <p class="text-green-600" x-text="'Salary: $' + currentJob.salary" aria-label="Salary"></p>
       <p class="text-blue-600" x-text="currentJob.type" aria-label="Job Type"></p>
 
       <div class="mt-2 space-x-2">
