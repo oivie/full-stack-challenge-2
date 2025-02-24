@@ -1,6 +1,6 @@
 # Wise Publishing Frontend Challenge 👨‍💻
 ## Information
-A minimal front-end challenge using Alpine.js, Tailwind CSS, and PHP for partial includes.
+A minimal front-end challenge using Alpine.js, Tailwind CSS, and PHP for partial includes. Screenshots and demo at the end, before original task TODO.
 ### This project demonstrates:
 - A public “Jobs” view where users can filter job postings by type, company, location, and minimum salary.
 - An “admin” area (dashboard) for viewing companies and job details, with fake “update/delete” actions.
@@ -62,6 +62,19 @@ Open your browser to http://127.0.0.1:8000/index.php?page=jobs
    --Provide placeholders for images or dynamic content (if any).
    --Keep CSS minimal (Tailwind from CDN).
 - Testing: No automated tests included, but you can open the console to see errors or logs.
+
+
+![Screenshot 2025-02-24 085138](https://github.com/user-attachments/assets/c953cc05-8c74-42cb-b3b2-07c0d6ca1f76)
+![Screenshot 2025-02-24 085149](https://github.com/user-attachments/assets/05dc4173-617b-4cb7-99a5-a712ed8a9992)
+![Screenshot 2025-02-24 085208](https://github.com/user-attachments/assets/d5350833-bd5c-4718-9882-23957c40beb3)
+![Screenshot 2025-02-24 085233](https://github.com/user-attachments/assets/eaf1fca9-baf9-45b5-b512-72c2001bca21)
+![Screenshot 2025-02-24 085217](https://github.com/user-attachments/assets/2cd4718d-6c30-4852-b94f-fdf05f98cecf)
+![Screenshot 2025-02-24 085223](https://github.com/user-attachments/assets/e51511df-d34b-4e4d-b6f7-564acb829806)
+![Screenshot 2025-02-24 085245](https://github.com/user-attachments/assets/d1b48187-785b-4425-a58c-f55aebb7700d)
+![Screenshot 2025-02-24 085423](https://github.com/user-attachments/assets/caffd943-0bc7-4698-a2ed-634806535ec3)
+
+https://github.com/user-attachments/assets/e7f915c3-7200-475b-84b8-ecf2fd291652
+
 
 ## Original Task:
 This challenge is meant to measure your capabilities as a **junior frontend developer** and assess your approach to solving frontend problems. We value clean code, and good user experience.
