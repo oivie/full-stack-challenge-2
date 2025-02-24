@@ -1,5 +1,69 @@
 # Wise Publishing Frontend Challenge 👨‍💻
+## Information
+A minimal front-end challenge using Alpine.js, Tailwind CSS, and PHP for partial includes.
+### This project demonstrates:
+- A public “Jobs” view where users can filter job postings by type, company, location, and minimum salary.
+- An “admin” area (dashboard) for viewing companies and job details, with fake “update/delete” actions.
+- A mini router in index.php that loads pages (e.g., jobs.blade.php, admin/dashboard.blade.php) based on ?page=....
+- SEO considerations (structured data JSON-LD, ARIA attributes, accessible markup).
 
+### Features
+Job Filtering:
+- Filter by type (Remote, In-Person), company substring, location substring, and minimum salary.
+- Real-time client-side filtering powered by Alpine.js.
+
+Admin Dashboard:
+- Summaries of all companies and the number of postings for each.
+-- Company Details: lists the jobs for a selected company, with “Update” / “Delete” placeholders.
+- Job Details: show a single job’s info, plus fake update/delete actions.
+- Create Job form (optional) for demonstration, no real backend.
+
+Tailwind CSS:
+- Utility-first styling for a modern, responsive UI.
+- Basic transitions and hover states.
+
+Alpine.js:
+- Manages all client-side state (filters, job listings, admin toggles).
+- Minimal overhead, no large framework.
+
+SEO:
+- Example structured data (application/ld+json) for the organization.
+- ARIA attributes for better accessibility.
+
+## Getting Started
+Clone this repository:
+> git clone https://github.com/your-username/full-stack-challenge-2.git
+> cd full-stack-challenge-2
+
+Run a local PHP server (since the project uses PHP for partial includes and routing):
+> cd public
+> php -S 127.0.0.1:8000 -t public
+(Adjust the path if needed.)
+
+Open your browser to http://127.0.0.1:8000/index.php?page=jobs
+
+### Public Site
+- By default, the mini router loads jobs.blade.php if no ?page= is specified.
+- URL: http://127.0.0.1:8000/?page=jobs
+- Filter by type, company, location, or min salary. The data is in data.json.
+
+### Admin Dashboard
+- URL: http://127.0.0.1:8000/?page=admin/dashboard
+- Shows all companies and number of postings.
+- Click a company to view its jobs (company.blade.php).
+- Click “View Details” to see job details (job.blade.php).
+- “Update” / “Delete” simply show notifications (fake actions).
+- A “Create Job” partial might be toggled if you added a button to show it.
+
+### Additional Notes
+- No Real Backend: All “update”/“delete” actions are front-end placeholders. Data is in data.json.
+- Performance for Core Web Vitals:
+   --Defer scripts (<script defer>).
+   --Provide placeholders for images or dynamic content (if any).
+   --Keep CSS minimal (Tailwind from CDN).
+- Testing: No automated tests included, but you can open the console to see errors or logs.
+
+## Original Task:
 This challenge is meant to measure your capabilities as a **junior frontend developer** and assess your approach to solving frontend problems. We value clean code, and good user experience.
 
 We appreciate adherence to **SOLID**, **KISS**, and **DRY** principles and encourage a focus on performance, **Core Web Vitals (CWV)**, and UI/UX skills.
