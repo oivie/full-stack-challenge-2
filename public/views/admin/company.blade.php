@@ -14,20 +14,20 @@
         <div class="mt-2 space-x-2">
           <!-- Link to Job Details Page -->
           <button @click="showJob(job)"
-                  class="px-3 py-1 bg-blue-500 text-white rounded"
-                  aria-label="View details for this job">
+            class="px-3 py-1 bg-blue-500 text-white rounded transition transform hover:scale-105 duration-150 ease-in-out"
+            aria-label="View details for this job">
             View Details
           </button>
           <!-- Fake Update -->
           <button @click="updateJob(job)"
-                  class="px-3 py-1 bg-yellow-500 text-white rounded"
-                  aria-label="Update this job">
+            class="px-3 py-1 bg-yellow-500 text-white rounded transition transform hover:scale-105 duration-150 ease-in-out"
+            aria-label="Update this job">
             Update
           </button>
           <!-- Fake Delete -->
           <button @click="deleteJob(job)"
-                  class="px-3 py-1 bg-red-500 text-white rounded"
-                  aria-label="Delete this job">
+            class="px-3 py-1 bg-red-500 text-white rounded transition transform hover:scale-105 duration-150 ease-in-out"
+            aria-label="Delete this job">
             Delete
           </button>
         </div>

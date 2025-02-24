@@ -21,7 +21,7 @@
       <template x-for="[companyName, count] in Object.entries(companyCounts())" :key="companyName">
         <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-150 ease-in-out">
           <button @click="showCompany(companyName)"
-                  class="text-lg font-medium text-blue-500 hover:underline focus:outline-none"
+                  class="text-lg font-medium text-blue-500 hover:text-blue-700 focus:outline-none"
                   aria-label="View details for company: " x-bind:aria-label="`View details for ${companyName}`">
             <span x-text="companyName"></span>
           </button>

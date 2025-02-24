@@ -7,8 +7,8 @@
       <p class="text-blue-600" x-text="currentJob.type" aria-label="Job Type"></p>
 
       <div class="mt-2 space-x-2">
-        <button @click="updateJob(currentJob)" class="px-3 py-1 bg-yellow-500 text-white rounded" aria-label="Update job">Update</button>
-        <button @click="deleteJob(currentJob)" class="px-3 py-1 bg-red-500 text-white rounded" aria-label="Delete job">Delete</button>
+        <button @click="updateJob(currentJob)" class="px-3 py-1 bg-yellow-500 text-white rounded transition transform hover:scale-105 duration-150" aria-label="Update job">Update</button>
+        <button @click="deleteJob(currentJob)" class="px-3 py-1 bg-red-500 text-white rounded transition transform hover:scale-105 duration-150" aria-label="Delete job">Delete</button>
       </div>
     </div>
   </template>

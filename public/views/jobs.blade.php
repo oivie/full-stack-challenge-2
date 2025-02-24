@@ -35,9 +35,13 @@
 
 
     <!-- Page Heading -->
-    <div class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white p-8 mb-8" role="banner">
-        <h1 class="text-4xl font-bold">Welcome to WiseJobs</h1>
-        <p class="mt-2">Find your next opportunity.</p>
+    <div class="p-8 mb-8" role="banner" aria-label="Welcome Banner">
+        <h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-blue-600">
+            Welcome to WiseJobs
+        </h1>
+        <p class="mt-2 text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-blue-300">
+            Find your next opportunity.
+        </p>
     </div>
 
     <!-- Alpine Data & UI Container -->
