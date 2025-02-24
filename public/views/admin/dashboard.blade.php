@@ -37,6 +37,7 @@
       </template>
     </div>
   </div>
+
   <!-- SECTION 2: Company Partial -->
   <div x-show="viewMode === 'companyDetails'" x-cloak>
     <button @click="viewMode = 'allCompanies'"
@@ -46,6 +47,7 @@
     </button>
     <?php include __DIR__ . '/company.blade.php'; ?>
   </div>
+
   <!-- SECTION 3: Job Partial -->
   <div x-show="viewMode === 'jobDetails'" x-cloak>
     <button @click="viewMode = 'companyDetails'"
@@ -55,6 +57,7 @@
     </button>
     <?php include __DIR__ . '/job.blade.php'; ?>
   </div>
+
   <!-- SECTION 4: Create Job Partial -->
   <div x-show="viewMode === 'createJob'" x-cloak>
     <button @click="viewMode = 'companyDetails'"
@@ -64,7 +67,9 @@
     </button>
     <?php include __DIR__ . '/create-job.blade.php'; ?>
   </div>
+
   <div x-show="loading" class="text-gray-500 italic" aria-live="assertive">Loading...</div>
+  
   <script src="../../js/admin.js"></script>
 </body>
 </html>

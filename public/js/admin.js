@@ -47,22 +47,33 @@ document.addEventListener('alpine:init', () => {
         this.viewMode = 'jobDetails';
       },
 
+      // only local storage below
       createJob() {
-        this.allJobs.push({ ...this.newJob, id: Date.now() });
+        const newJob = { ...this.newJob, id: Date.now() };
+        this.allJobs.push(newJob);
+        localStorage.setItem('jobs', JSON.stringify(this.allJobs));
         this.newJob = { title: '', company: '', location: '', salary: '', type: '' };
-        this.viewMode = 'companyDetails';
+        this.viewMode = 'allCompanies';
         this.notification = 'Job created successfully!';
         setTimeout(() => this.notification = '', 3000);
       },
 
-      updateJob(job) {
-        // Fake update logic
-        this.notification = 'Job updated successfully!';
-        setTimeout(() => this.notification = '', 3000);
+      updateJob(updatedJob) {
+        const index = this.allJobs.findIndex(job => job.id === updatedJob.id);
+        if (index !== -1) {
+          this.allJobs[index] = updatedJob;
+          localStorage.setItem('jobs', JSON.stringify(this.allJobs)); // Update local storage
+          this.notification = 'Job updated successfully!';
+          setTimeout(() => this.notification = '', 3000);
+        } else {
+          this.notification = 'Job not found!';
+          setTimeout(() => this.notification = '', 3000);
+        }
       },
 
       deleteJob(job) {
         this.allJobs = this.allJobs.filter(j => j.id !== job.id);
+        localStorage.setItem('jobs', JSON.stringify(this.allJobs)); // Update local storage
         this.notification = 'Job deleted successfully!';
         setTimeout(() => this.notification = '', 3000);
       },
