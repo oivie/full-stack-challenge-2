@@ -21,6 +21,7 @@ document.addEventListener("alpine:init", () => {
                     this.hasMore = false;
                 }
                 this.list = [...this.list, ...newJobs];
+                localStorage.setItem('jobs', JSON.stringify(this.list));
                 this.page++;
             } catch (error) {
                 console.error("Error fetching jobs:", error);

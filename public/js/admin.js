@@ -6,6 +6,13 @@ document.addEventListener('alpine:init', () => {
       currentCompany: '',
       currentJob: null,
       viewMode: 'allCompanies',
+      newJob: {
+        title: '',
+        company: '',
+        location: '',
+        salary: '',
+        type: ''
+      },
   
       // 1) Fetch all jobs once
       async fetchAllJobs() {
@@ -34,44 +41,34 @@ document.addEventListener('alpine:init', () => {
         this.currentCompany = companyName;
         this.viewMode = 'companyDetails';
       },
+
       showJob(job) {
         this.currentJob = job;
         this.viewMode = 'jobDetails';
       },
-  
-      // 3) For Company Page
-      initCompanyPage() {
-        // Parse the ?company= from the URL
-        const params = new URLSearchParams(window.location.search);
-        this.currentCompany = params.get('company') || '';
-        this.fetchAllJobs(); // ensure we have all jobs
+
+      createJob() {
+        this.allJobs.push({ ...this.newJob, id: Date.now() });
+        this.newJob = { title: '', company: '', location: '', salary: '', type: '' };
+        this.viewMode = 'companyDetails';
+        this.notification = 'Job created successfully!';
+        setTimeout(() => this.notification = '', 3000);
       },
+
+      updateJob(job) {
+        // Fake update logic
+        this.notification = 'Job updated successfully!';
+        setTimeout(() => this.notification = '', 3000);
+      },
+
+      deleteJob(job) {
+        this.allJobs = this.allJobs.filter(j => j.id !== job.id);
+        this.notification = 'Job deleted successfully!';
+        setTimeout(() => this.notification = '', 3000);
+      },
+
       companyJobs() {
         return this.allJobs.filter(job => job.company === this.currentCompany);
-      },
-  
-      // 4) For Single Job Page
-      initJobPage() {
-        const params = new URLSearchParams(window.location.search);
-        const jobId = Number(params.get('jobId'));
-        this.fetchAllJobs().then(() => {
-          this.currentJob = this.allJobs.find(j => j.id === jobId) || null;
-        });
-      },
-  
-      // Fake Update
-      updateJob(job) {
-        this.notification = `Job "${job.title}" updated successfully!`;
-        // In real app, you'd do an API call here
-        setTimeout(() => { this.notification = '' }, 2000);
-      },
-  
-      // Fake Delete
-      deleteJob(job) {
-        this.notification = `Job "${job.title}" deleted successfully!`;
-        // In real app, you'd do an API call + remove from array
-        setTimeout(() => { this.notification = '' }, 2000);
-      },
+      }
     }));
-  });
-  
+});
