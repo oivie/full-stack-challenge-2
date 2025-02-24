@@ -10,10 +10,12 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 p-4">
+
   <!-- Navigation -->
   <nav aria-label="Main navigation">
     <?php include __DIR__ . '/../nav.blade.php'; ?>
   </nav>
+
   <!-- SECTION 1: All Companies -->
   <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md" x-show="viewMode === 'allCompanies' && !loading">
     <div class="flex items-center justify-between mb-6">
@@ -60,16 +62,16 @@
 
   <!-- SECTION 4: Create Job Partial -->
   <div x-show="viewMode === 'createJob'" x-cloak>
-    <button @click="viewMode = 'companyDetails'"
+    <button @click="viewMode = 'allCompanies'"
             class="mb-4 px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded"
-            aria-label="Back to Company Details">
-      ← Back to Company
+            aria-label="Back to All Companies">
+      ← Back to All Companies
     </button>
     <?php include __DIR__ . '/create-job.blade.php'; ?>
   </div>
 
   <div x-show="loading" class="text-gray-500 italic" aria-live="assertive">Loading...</div>
-  
+
   <script src="../../js/admin.js"></script>
 </body>
 </html>

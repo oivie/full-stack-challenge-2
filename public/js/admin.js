@@ -47,7 +47,7 @@ document.addEventListener('alpine:init', () => {
         this.viewMode = 'jobDetails';
       },
 
-      // only local storage below
+      // only local storage
       createJob() {
         const newJob = { ...this.newJob, id: Date.now() };
         this.allJobs.push(newJob);
