@@ -72,6 +72,11 @@ Open your browser to http://127.0.0.1:8000/index.php?page=jobs
 ![Screenshot 2025-02-24 085223](https://github.com/user-attachments/assets/e51511df-d34b-4e4d-b6f7-564acb829806)
 ![Screenshot 2025-02-24 085245](https://github.com/user-attachments/assets/d1b48187-785b-4425-a58c-f55aebb7700d)
 ![Screenshot 2025-02-24 085423](https://github.com/user-attachments/assets/caffd943-0bc7-4698-a2ed-634806535ec3)
+![image](https://github.com/user-attachments/assets/7f463556-da86-4762-85b3-eda39baed239)
+![Screenshot 2025-02-25 074356](https://github.com/user-attachments/assets/7c1d46f8-4ab2-4f69-ac69-1fa5e0864156)
+![Screenshot 2025-02-25 074404](https://github.com/user-attachments/assets/15030698-3944-421f-b54c-71388b68a42e)
+![Screenshot 2025-02-25 074233](https://github.com/user-attachments/assets/bf85202c-e04f-4c5a-82f4-c19a8f40be46)
+![image](https://github.com/user-attachments/assets/57f2a9d9-10cd-40ac-b6e0-3f46ccd94590)
 
 https://github.com/user-attachments/assets/e7f915c3-7200-475b-84b8-ecf2fd291652
 
